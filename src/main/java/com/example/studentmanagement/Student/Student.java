@@ -11,8 +11,22 @@ import java.time.LocalDate;
 @Data
 @NoArgsConstructor @AllArgsConstructor
 @Entity
-@Table
+@Table(name = "students")
 public class Student {
+    public Student(String studentName, String gender,
+                   LocalDate dateOfBirth, String phoneNumber,
+                   String email, String homeAddress, String emergencyContactName,
+                   String emergencyContactNumber) {
+        this.studentName = studentName;
+        this.gender = gender;
+        this.dateOfBirth = dateOfBirth;
+        this.phoneNumber = phoneNumber;
+        this.email = email;
+        this.homeAddress = homeAddress;
+        this.emergencyContactName = emergencyContactName;
+        this.emergencyContactNumber = emergencyContactNumber;
+    }
+
     @Id
     @SequenceGenerator(
             name = "students sequence",
@@ -30,25 +44,30 @@ public class Student {
     @Column(nullable = false)
     private String studentName;
 
-    @NotNull(message = "Please enter date of birth")
-    @Past(message = "Birth date should be less than current date!")
-    @DateTimeFormat(iso = DateTimeFormat.ISO.DATE)
-    private LocalDate dateOfBirth;
-
     @NotEmpty(message = "Student gender is required")
     @Column(nullable = false)
     private String gender;
 
-    @NotEmpty(message = "email is required")
-    @Email
-    @Column(nullable = false, unique = true)
-    private String email;
+    @NotNull(message = "Please enter date of birth")
+    @Past(message = "Birth date should be less than current date!")
+    @DateTimeFormat(iso = DateTimeFormat.ISO.DATE)
+    private LocalDate dateOfBirth;
 
     @NotEmpty(message = "Phone number is required")
     @NotNull(message = "Phone number can not be null")
     @Size(max = 13, min = 10, message = "Mobile number should be of 10 digits")
     @Column(nullable = false, unique = true)
     private String phoneNumber;
+
+    @NotEmpty(message = "email is required")
+    @Email
+    @Column(nullable = false, unique = true)
+    private String email;
+
+    @NotEmpty(message = "Address is required")
+    @NotNull(message = "Address can not be null")
+    @Column(nullable = false)
+    private String homeAddress;
 
     @NotEmpty(message = "Emergency Contact Name is required")
     @NotNull(message = "Emergency Contact Name can not be null")
@@ -60,10 +79,5 @@ public class Student {
     @Size(max = 13, min = 10, message = "Mobile number should be of 10 digits")
     @Column(nullable = false)
     private String emergencyContactNumber;
-
-    @NotEmpty(message = "Address is required")
-    @NotNull(message = "Address can not be null")
-    @Column(nullable = false)
-    private String homeAddress;
 
 }
