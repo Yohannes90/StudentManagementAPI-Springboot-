@@ -11,7 +11,7 @@ import java.time.LocalDate;
 @Data
 @NoArgsConstructor @AllArgsConstructor
 @Entity
-@Table(name = "students")
+@Table
 public class Student {
     public Student(String studentName, String gender,
                    LocalDate dateOfBirth, String phoneNumber,
