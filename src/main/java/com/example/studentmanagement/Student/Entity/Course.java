@@ -23,5 +23,21 @@ public class Course {
     @Column(nullable = false)
     private String semister;
 
+    @Column(nullable = false)
+    private String course1;
 
+    @Column(nullable = false)
+    private String course2;
+
+    @Column(nullable = false)
+    private String course3;
+
+    @Column(nullable = false)
+    private String course4;
+
+    @Column(nullable = false)
+    private String course5;
+
+    @Column(nullable = false)
+    private String course6;
 }
