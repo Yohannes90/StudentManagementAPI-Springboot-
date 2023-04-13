@@ -1,5 +1,7 @@
-package com.example.studentmanagement.Student;
+package com.example.studentmanagement.Student.Controllers;
 
+import com.example.studentmanagement.Student.Entity.Student;
+import com.example.studentmanagement.Student.Services.StudentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -9,6 +11,7 @@ import java.util.List;
 @RestController
 @RequestMapping(path ="api/v1/students")
 public class StudentController {
+
     private final StudentService studentService;
 
     @Autowired
@@ -44,4 +47,5 @@ public class StudentController {
         studentService.updateStudent(studentId, studentName, gender, dateOfBirth, phoneNumber,
                 email, homeAddress, emergencyContactName, emergencyContactNumber);
     }
+
 }
