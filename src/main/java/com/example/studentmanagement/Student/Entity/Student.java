@@ -1,4 +1,4 @@
-package com.example.studentmanagement.Student;
+package com.example.studentmanagement.Student.Entity;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.*;
@@ -7,12 +7,12 @@ import org.springframework.format.annotation.DateTimeFormat;
 
 import java.time.LocalDate;
 
-
 @Data
 @NoArgsConstructor @AllArgsConstructor
 @Entity
 @Table
 public class Student {
+
     public Student(String studentName, String gender,
                    LocalDate dateOfBirth, String phoneNumber,
                    String email, String homeAddress, String emergencyContactName,
