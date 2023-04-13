@@ -1,5 +1,7 @@
 package com.example.studentmanagement.Student;
 
+import com.example.studentmanagement.Student.Entity.Student;
+import com.example.studentmanagement.Student.Repositories.StudentRepository;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -39,4 +41,5 @@ public class StudentConfig {
             );
         };
     }
+
 }
