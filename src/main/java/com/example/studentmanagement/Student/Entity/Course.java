@@ -6,6 +6,7 @@ import jakarta.validation.constraints.NotNull;
 import lombok.Data;
 
 @Data
+@Entity
 @Table
 public class Course {
 
@@ -40,4 +41,8 @@ public class Course {
 
     @Column(nullable = false)
     private String course6;
+
+    @ManyToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "fk_student_id")
+    private Student student;
 }
