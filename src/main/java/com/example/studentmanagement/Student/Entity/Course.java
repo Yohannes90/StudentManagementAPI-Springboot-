@@ -10,6 +10,22 @@ import lombok.Data;
 @Table
 public class Course {
 
+    public Course(Student student, String year, String semister, String course1, String course2, String course3, String course4, String course5, String course6) {
+        this.student = student;
+        this.year = year;
+        this.semister = semister;
+        this.course1 = course1;
+        this.course2 = course2;
+        this.course3 = course3;
+        this.course4 = course4;
+        this.course5 = course5;
+        this.course6 = course6;
+    }
+
+    @ManyToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "fk_student_id")
+    private Student student;
+
     @Id
     @GeneratedValue
     private Long courseId;
@@ -42,7 +58,5 @@ public class Course {
     @Column(nullable = false)
     private String course6;
 
-    @ManyToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "fk_student_id")
-    private Student student;
+
 }
