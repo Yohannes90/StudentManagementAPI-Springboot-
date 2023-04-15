@@ -1,7 +1,7 @@
-package com.example.studentmanagement.Student.Controllers;
+package com.example.studentmanagement.Controllers;
 
-import com.example.studentmanagement.Student.Entity.Course;
-import com.example.studentmanagement.Student.Services.CourseService;
+import com.example.studentmanagement.Entity.Course;
+import com.example.studentmanagement.Services.CourseService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;

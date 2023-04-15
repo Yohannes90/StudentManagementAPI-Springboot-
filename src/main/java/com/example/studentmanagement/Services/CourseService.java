@@ -1,7 +1,7 @@
-package com.example.studentmanagement.Student.Services;
+package com.example.studentmanagement.Services;
 
-import com.example.studentmanagement.Student.Entity.Course;
-import com.example.studentmanagement.Student.Repositories.CourseRepository;
+import com.example.studentmanagement.Entity.Course;
+import com.example.studentmanagement.Repositories.CourseRepository;
 import lombok.NoArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

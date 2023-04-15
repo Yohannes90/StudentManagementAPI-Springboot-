@@ -1,7 +1,7 @@
-package com.example.studentmanagement.Student;
+package com.example.studentmanagement.Student.Config;
 
-import com.example.studentmanagement.Student.Entity.Student;
-import com.example.studentmanagement.Student.Repositories.StudentRepository;
+import com.example.studentmanagement.Entity.Student;
+import com.example.studentmanagement.Repositories.StudentRepository;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

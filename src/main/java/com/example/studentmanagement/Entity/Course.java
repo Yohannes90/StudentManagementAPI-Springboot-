@@ -1,11 +1,13 @@
-package com.example.studentmanagement.Student.Entity;
+package com.example.studentmanagement.Entity;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.NotNull;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Data
+@NoArgsConstructor
 @Entity
 @Table
 public class Course {
@@ -57,6 +59,5 @@ public class Course {
 
     @Column(nullable = false)
     private String course6;
-
 
 }
