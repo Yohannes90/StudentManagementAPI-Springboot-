@@ -1,4 +1,4 @@
-package com.example.studentmanagement.Student.Config;
+package com.example.studentmanagement.Config;
 
 import com.example.studentmanagement.Entity.Student;
 import com.example.studentmanagement.Repositories.StudentRepository;
